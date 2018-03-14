@@ -1,3 +1,7 @@
+:root {
+	--randomSize: 80px;
+}
+
 .ProgressBar {
 	background: #2A293B;
 	bottom: 0;
@@ -64,9 +68,9 @@
 	animation: bubbleRise 3s linear infinite, bubbleSway 2s ease-in-out infinite alternate;
 	border-radius: 50%;
 	box-shadow: inset 0px 1px 2px 1px rgba(255, 255, 255, 1);
-	height: 20px;
+	height: var(--randomSize);
 	position: absolute;
-	width: 20px;
+	width: var(--randomSize);
 	left: 20%;
 }
 

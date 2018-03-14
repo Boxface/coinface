@@ -21,6 +21,13 @@ class Transaction extends React.Component {
 		};
 
 		this.tick = this.tick.bind(this);
+
+		//Hi Dan it's shaun. it's late - don't be mad. :)
+
+		this.min = 10;
+		this.max = 40;
+		this.size = Math.floor(Math.random()*(this.max - this.min) + this.min);
+
 	}
 
 	componentDidMount() {
@@ -75,7 +82,7 @@ class Transaction extends React.Component {
 					</div>
 					<p className='amount'>{amount} {symbol}</p>
 				</div>
-				<ProgressBar trust={trust}></ProgressBar>
+				<ProgressBar trust={trust} size={this.size}></ProgressBar>
 			</div>
 		);
 	}

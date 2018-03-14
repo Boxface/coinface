@@ -6,7 +6,11 @@ import './ProgressBar.css';
 const ProgressBar = ({ trust }) => (
 	<div className='ProgressBar' style={{height:`${trust}%`}}>
 		{trust < 100 &&
-			<div className='wave'></div>
+			<div>
+				<div className='wave'></div>
+				<div className='bubble'></div>
+				<div className='bubble'></div>
+			</div>
 		}
 	</div>
 );

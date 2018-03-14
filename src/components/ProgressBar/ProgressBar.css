@@ -6,6 +6,8 @@
 	position: absolute;
 	width: 100%;
 	z-index: 1;
+	transition: height 1s ease;
+	will-change: transition;
 }
 
 .ProgressBar .wave {
@@ -56,4 +58,69 @@
 	100% {
 		transform: translateX(-1600px);
 	}
+}
+
+.ProgressBar .bubble {
+	animation: bubbleRise 3s linear infinite, bubbleSway 2s ease-in-out infinite alternate;
+	border-radius: 50%;
+	box-shadow: inset 0px 1px 2px 1px rgba(255, 255, 255, 1);
+	height: 20px;
+	position: absolute;
+	width: 20px;
+	left: 20%;
+}
+
+.ProgressBar .bubble:nth-child(2) {
+	height: 40px;
+	width: 40px;
+	left: 80%;
+}
+
+.ProgressBar .bubble:before,
+.ProgressBar .bubble:after {
+	border-radius: inherit;
+	box-shadow: inherit;
+	content: '.';
+	position: absolute;
+	text-indent: -9999px;
+}
+
+.ProgressBar .bubble:before {
+	animation: bubbleRise 4s linear infinite, bubbleSway 2s ease-in-out infinite alternate;
+	height: 30px;
+	left: 50%;
+	width: 30px;
+}
+
+.ProgressBar .bubble:after {
+	animation: bubbleRise 3s linear infinite, bubbleSway 2s ease-in-out infinite alternate;
+	height: 10px;
+	right: 20%;
+	width: 10px;
+}
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(100px);
+				visibility: visible;
+				opacity: 1;
+    }
+		75% {
+				visibility: visible;
+				opacity: 1;
+    }
+    100% {
+      	transform: translateY(0);
+				visibility: hidden;
+				opacity: 0;
+    }
+}
+
+@keyframes bubbleSway {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
 }

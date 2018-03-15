@@ -24,8 +24,8 @@ class Transaction extends React.Component {
 
 		//Hi Dan it's shaun. it's late - don't be mad. :)
 
-		this.min = 10;
-		this.max = 40;
+		this.min = 25;
+		this.max = 50;
 		this.size = Math.floor(Math.random()*(this.max - this.min) + this.min);
 
 	}

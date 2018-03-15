@@ -70,6 +70,26 @@
 	animation-delay: 5s;
 }
 
+.Transaction:nth-child(5n+1) .ProgressBar .bubble {
+	animation-delay: 1s;
+}
+
+.Transaction:nth-child(5n+2) .ProgressBar .bubble {
+	animation-delay: 2s;
+}
+
+.Transaction:nth-child(5n+3) .ProgressBar .bubble {
+	animation-delay: 3s;
+}
+
+.Transaction:nth-child(5n+4) .ProgressBar .bubble {
+	animation-delay: 4s;
+}
+
+.Transaction:nth-child(5n+5) .ProgressBar .bubble {
+	animation-delay: 5s;
+}
+
 @keyframes bounceInRight {
 	from,
 	60%,
